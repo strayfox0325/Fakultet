@@ -1,6 +1,6 @@
 ***************************** OPIS I FUNKCIONALNOSTI APLIKACIJE ***************************************************************************************************************
 Ova aplikacija je osmisljena sa ciljem da omoguci rad sa podacima vezanim za fakultet. Omogucava funkcionalnosti kao sto su unos, 
-ucitavanje, ispis i azuriranje tabela studenata, profesora, ispita, smerova i polozenih ispita iz baze podataka.
+ucitavanje, ispis i azuriranje tabela studenata, profesora, ispita i polozenih ispita iz baze podataka.
 Koriste se ajax funkcije i 'get' i 'post' zahtevi, php kodovi i include funkcija, $_POST superglobal.
 Koriste se SQL SELECT i INSERT INTO upiti za rad sa bazom podataka 'fakultet', 2 jQuery plugina i forme za unos.
 
@@ -12,9 +12,13 @@ Takodje, uspostavlja se konekcija sa bazom i porverava uspesnost te konekcije
 'js' folder sadrzi jQuery, jQuery plugin za validaciju forme i datepicker plugin za izbor datuma sa naprednijimm funkcionalnostima kao sto su izbor meseca i godine
 'form-validation.js' se koristi na svim stranicama, posto se na svakoj vrsi unos preko forme, dok se 'datepicker.js' koristi pri unosu datuma polaganja u fajlu 'polozeni-ispiti.php'
 
---------------------------------- fakultet.sql --------------------------------------------------------------------------------------------------------------------------------
+------------------------------------- fakultet.sql --------------------------------------------------------------------------------------------------------------------------------
 Ovaj fajl predstavlja exportovanu bazu podataka koja sadrzi 5 tabela i vec je popunjena sa nekim redovima.
 Konekcija svake php stranice sa bazom se vrsi preko require direktive kojom se dodaje fajl 'config.php'
+
+-------------------------------------- index.php -------------------------------------------------------------------------------------------------------------------------------------
+Pocetna stranica, sadrzi navbar sa linkovima do php stranica. Na njoj se jos nalazi about us paragraf, kao i slika.
+Sve ostale stranice takodje imaju navbar sa dugmetom za povratak na pocetnu (index.php) stranicu
 
 --------------------------------- studenti-ajax.php ----------------------------------------------------------------------------------------------------------------------------
 Ova stranica sadrzi formu za unos studenta, pri cemu se uneti podaci proveravaju jQuery validation pluginom.
@@ -32,9 +36,9 @@ Ovo se vrsi prema dobroj praksi kako bi se izbegao direktan pristup i unos prome
 
 --------------------------------- Ostali php fajlovi ----------------------------------------------
 Ostali php fajlovi su slicne strukture kao i 'student-ajax.php' s tim sto je ovde koriscen umetnut php kod koji vrsi unos i citanje iz baze.
-Pored studenata, unosimo i citamo profesore(profesori.php), ispite(ispiti.php), smerove(smerovi.php) i polozene ispite (polozeni_ispiti.php).
+Pored studenata, unosimo i citamo profesore(profesori.php), ispite(ispiti.php) i polozene ispite (polozeni_ispiti.php).
 'polozeni_ispiti.php' takodje sadrzi i novu funkcionalnost, a to je unos datuma preko datepicker.js plugina. Ova tabela sadrzi primarne kljuceve drugih tabela kao kolone, tako da je neophodno pri prikazuju
 rezultala uraditi JOIN tabela po zajednickim kolonama kako bi ispis bio smislen korisniku.
 
---------------------------------- style2.css ----------------------------------------------
-Sadrzi stil formi i button-a
+--------------------------------- style.css ----------------------------------------------
+Sadrzi stil formi,section-a, button-a i ostalih komponenti

@@ -9,12 +9,26 @@
             <!-- include-ujemo css, jquery i validaciju -->
 
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="style2.css">
         <script type="text/javascript" src="js//jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="js/jquery-validation-1.19.1/dist/jquery.validate.min.js"></script>
         <script type="text/javascript" src="js/form-validation.js"></script>
         <title>Student form</title>
     </head>
+    <nav class="navbar">
+  <div id="trapezoid">
+    <a class="sub-home" href="#">Home</a>
+    <a href="ispiti.php" class="expandHome">Ispiti</a>
+     <div class="subnav">
+     <a href="profesori.php" class="expandHome">Profesori</a>
+    </div>
+     <div class="subnav">
+     <a href="polozeni_ispiti.php" class="expandHome">Položeno</a>
+      </div>
+    <a href="index.php" class="expandHome">Home</a>
+  </div>
+</nav>
 
         <!-- izgled tabele za ispis rezultata iz baze -->
     <style>
