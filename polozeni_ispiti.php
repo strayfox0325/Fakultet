@@ -14,24 +14,19 @@
         <script type="text/javascript" src="js//jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="js/jquery-validation-1.19.1/dist/jquery.validate.min.js"></script>
         <script type="text/javascript" src="js/form-validation.js"></script>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script type="text/javascript" src="js/datepicker.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
         <title>Passed exams form</title>
     </head>
-    <nav class="navbar">
-  <div id="trapezoid">
-    <a class="sub-home" href="#">Home</a>
-    <a href="studenti-ajax.php" class="expandHome">Studenti</a>
-     <div class="subnav">
-     <a href="profesori.php" class="expandHome">Profesori</a>
-    </div>
-     <div class="subnav">
-     <a href="ispiti.php" class="expandHome">Ispiti</a>
-      </div>
-    <a href="index.php" class="expandHome">Home</a>
-  </div>
-</nav>
+    <div class="navbar">
+  <a href="index.php">Home</a>
+  <a href="studenti.php">Studenti</a>
+  <a href="profesori.php">Profesori</a>
+  <a href="smerovi.php">Smerovi</a>
+  <a href="ispiti.php">Ispiti</a>
+
+  
+
+</div>
         <!-- izgled tabele za ispis rezultata iz baze -->
     <style>
         table,th,td {

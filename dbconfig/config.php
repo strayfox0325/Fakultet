@@ -3,7 +3,7 @@
 
 <?php
     $server = "localhost";
-    $username = "isidora";
+    $username = "root";
     $password = "";
     $dbname = "fakultet";
     

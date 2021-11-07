@@ -15,19 +15,13 @@
         <script type="text/javascript" src="js/form-validation.js"></script>
         <title>Exam form</title>
     </head>
-    <nav class="navbar">
-  <div id="trapezoid">
-    <a class="sub-home" href="#">Home</a>
-    <a href="studenti-ajax.php" class="expandHome">Studenti</a>
-     <div class="subnav">
-     <a href="profesori.php" class="expandHome">Profesori</a>
-    </div>
-     <div class="subnav">
-     <a href="polozeni_ispiti.php" class="expandHome">Položeno</a>
-      </div>
-    <a href="index.php" class="expandHome">Home</a>
-  </div>
-</nav>
+    <div class="navbar">
+  <a href="index.php">Home</a>
+  <a href="studenti-ajax.php">Studenti</a>
+  <a href="profesori.php">Profesori</a>
+  <a href="smerovi.php">Smerovi</a>
+    <a href="polozeni_ispiti.php">Polozeno</a>
+</div>
     <!-- izgled tabele za ispis rezultata iz baze -->
     <style>
         table,th,td {
