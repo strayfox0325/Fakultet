@@ -2,8 +2,8 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 22, 2021 at 10:48 AM
+-- Host: localhost:3306
+-- Generation Time: Nov 07, 2021 at 06:03 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -24,81 +24,83 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Ispiti`
+-- Table structure for table `ispiti`
 --
 
-CREATE TABLE `Ispiti` (
+CREATE TABLE `ispiti` (
   `id` int(11) NOT NULL,
   `naziv` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `Ispiti`
+-- Dumping data for table `ispiti`
 --
 
-INSERT INTO `Ispiti` (`id`, `naziv`) VALUES
-(1, 'OIKT');
+INSERT INTO `ispiti` (`id`, `naziv`) VALUES
+(1, 'OIKT'),
+(2, 'Ekonomija');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Polozeni_ispiti`
+-- Table structure for table `polozeni_ispiti`
 --
 
-CREATE TABLE `Polozeni_ispiti` (
+CREATE TABLE `polozeni_ispiti` (
   `id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL,
   `ispit_id` int(11) NOT NULL,
   `profesor_id` int(11) NOT NULL,
-  `datum` date NOT NULL,
+  `datum` varchar(120) NOT NULL,
   `ocena` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Profesori`
+-- Table structure for table `profesori`
 --
 
-CREATE TABLE `Profesori` (
+CREATE TABLE `profesori` (
   `id` int(11) NOT NULL,
   `ime` varchar(120) NOT NULL,
   `prezime` varchar(120) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `Profesori`
+-- Dumping data for table `profesori`
 --
 
-INSERT INTO `Profesori` (`id`, `ime`, `prezime`) VALUES
-(1, 'Dejan', 'Lukic');
+INSERT INTO `profesori` (`id`, `ime`, `prezime`) VALUES
+(1, 'Dejan', 'Lukic'),
+(2, 'Dragan', 'Lazic');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Smerovi`
+-- Table structure for table `smerovi`
 --
 
-CREATE TABLE `Smerovi` (
+CREATE TABLE `smerovi` (
   `id` int(11) NOT NULL,
   `naziv` varchar(120) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `Smerovi`
+-- Dumping data for table `smerovi`
 --
 
-INSERT INTO `Smerovi` (`id`, `naziv`) VALUES
+INSERT INTO `smerovi` (`id`, `naziv`) VALUES
 (1, 'ISIT'),
 (2, 'OM');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Studenti`
+-- Table structure for table `studenti`
 --
 
-CREATE TABLE `Studenti` (
+CREATE TABLE `studenti` (
   `id` int(11) NOT NULL,
   `ime` varchar(120) NOT NULL,
   `prezime` varchar(120) NOT NULL,
@@ -108,49 +110,50 @@ CREATE TABLE `Studenti` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `Studenti`
+-- Dumping data for table `studenti`
 --
 
-INSERT INTO `Studenti` (`id`, `ime`, `prezime`, `jmbg`, `broj_indeksa`, `godina_upisa`) VALUES
+INSERT INTO `studenti` (`id`, `ime`, `prezime`, `jmbg`, `broj_indeksa`, `godina_upisa`) VALUES
 (4, 'Isidora', 'Lazic', '1234748294672', '192', 2018),
 (5, 'Marija', 'Jovic', '1746398789502', '362', 2018),
-(12, 'Ana', 'Markovic', '8472625364732', '553', 2017);
+(12, 'Ana', 'Markovic', '8472625364732', '553', 2017),
+(14, 'Marija', 'Jovic', '5847385849495', '111', 2019);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `Ispiti`
+-- Indexes for table `ispiti`
 --
-ALTER TABLE `Ispiti`
+ALTER TABLE `ispiti`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `Polozeni_ispiti`
+-- Indexes for table `polozeni_ispiti`
 --
-ALTER TABLE `Polozeni_ispiti`
+ALTER TABLE `polozeni_ispiti`
   ADD PRIMARY KEY (`id`),
   ADD KEY `Polozeni ispiti_fk_1` (`student_id`),
   ADD KEY `Polozeni ispiti_fk_2` (`ispit_id`),
   ADD KEY `Polozeni ispiti_fk_3` (`profesor_id`);
 
 --
--- Indexes for table `Profesori`
+-- Indexes for table `profesori`
 --
-ALTER TABLE `Profesori`
+ALTER TABLE `profesori`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `Smerovi`
+-- Indexes for table `smerovi`
 --
-ALTER TABLE `Smerovi`
+ALTER TABLE `smerovi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `Studenti`
+-- Indexes for table `studenti`
 --
-ALTER TABLE `Studenti`
+ALTER TABLE `studenti`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -158,46 +161,46 @@ ALTER TABLE `Studenti`
 --
 
 --
--- AUTO_INCREMENT for table `Ispiti`
+-- AUTO_INCREMENT for table `ispiti`
 --
-ALTER TABLE `Ispiti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `ispiti`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `Polozeni_ispiti`
+-- AUTO_INCREMENT for table `polozeni_ispiti`
 --
-ALTER TABLE `Polozeni_ispiti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `polozeni_ispiti`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `Profesori`
+-- AUTO_INCREMENT for table `profesori`
 --
-ALTER TABLE `Profesori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `profesori`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `Smerovi`
+-- AUTO_INCREMENT for table `smerovi`
 --
-ALTER TABLE `Smerovi`
+ALTER TABLE `smerovi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `Studenti`
+-- AUTO_INCREMENT for table `studenti`
 --
-ALTER TABLE `Studenti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+ALTER TABLE `studenti`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `Polozeni_ispiti`
+-- Constraints for table `polozeni_ispiti`
 --
-ALTER TABLE `Polozeni_ispiti`
-  ADD CONSTRAINT `Polozeni ispiti_fk_1` FOREIGN KEY (`student_id`) REFERENCES `Studenti` (`id`),
-  ADD CONSTRAINT `Polozeni ispiti_fk_2` FOREIGN KEY (`ispit_id`) REFERENCES `Ispiti` (`id`),
-  ADD CONSTRAINT `Polozeni ispiti_fk_3` FOREIGN KEY (`profesor_id`) REFERENCES `Profesori` (`id`);
+ALTER TABLE `polozeni_ispiti`
+  ADD CONSTRAINT `Polozeni ispiti_fk_1` FOREIGN KEY (`student_id`) REFERENCES `studenti` (`id`),
+  ADD CONSTRAINT `Polozeni ispiti_fk_2` FOREIGN KEY (`ispit_id`) REFERENCES `ispiti` (`id`),
+  ADD CONSTRAINT `Polozeni ispiti_fk_3` FOREIGN KEY (`profesor_id`) REFERENCES `profesori` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

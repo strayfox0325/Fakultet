@@ -39,7 +39,7 @@
     <body>
         <div class="main-div">
             <form action="" method="POST" id="student-form" name="student-form" >
-            <h1>UNOS STUDENTA AJAX</h1>
+            <h1>UNOS STUDENTA</h1>
 
               <label for="ime">Ime</label>
               <input type="text" name="ime" id="ime" placeholder="Unesite ime" required>

@@ -11,15 +11,17 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="style2.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script type="text/javascript" src="js//jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="js/jquery-validation-1.19.1/dist/jquery.validate.min.js"></script>
         <script type="text/javascript" src="js/form-validation.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script type="text/javascript" src="js/datepicker.js"></script>
         <title>Passed exams form</title>
     </head>
     <div class="navbar">
   <a href="index.php">Home</a>
-  <a href="studenti.php">Studenti</a>
+  <a href="studenti-ajax.php">Studenti</a>
   <a href="profesori.php">Profesori</a>
   <a href="smerovi.php">Smerovi</a>
   <a href="ispiti.php">Ispiti</a>

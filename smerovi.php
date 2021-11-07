@@ -22,7 +22,7 @@
   <a href="studenti-ajax.php">Studenti</a>
   <a href="profesori.php">Profesori</a>
   <a href="ispiti.php">Ispiti</a>
-  <a href="polozeni-ispiti.php">Polozeno</a>
+  <a href="polozeni_ispiti.php">Polozeno</a>
 </div>
         <!-- izgled tabele za ispis rezultata iz baze -->
     <style>
