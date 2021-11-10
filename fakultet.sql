@@ -24,6 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admini`
+--
+
+CREATE TABLE `admini` (
+  `id` int(11) NOT NULL,
+  `username` varchar(120) NOT NULL,
+  `password` varchar(120) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admini`
+--
+
+INSERT INTO `admini` (`id`, `username`, `password`) VALUES
+(1, 'Isidora', 'Lazic');
+
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ispiti`
 --
 

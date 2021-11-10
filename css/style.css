@@ -1,8 +1,13 @@
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 body {
     min-width: 800px;
-   background: url("img/bg1.jpg") repeat 0 0;
-    margin:0px;
+   background: url("../img/bg3.jpg");
+   background-size: 100% 100%; 
+   background-repeat: no-repeat;
+   background-attachment: fixed; 
   }
   
   
@@ -58,58 +63,16 @@ body {
   }
 
 
-/* The dropdown container */
-.dropdown {
-  float: left;
-  overflow: hidden;
+  .navbar {
+    background-color: rgb(207, 161, 153);
+    opacity: 0.8;
+    font-weight: bold;
+  }
+.navbar a:hover {
+  background-color: rgb(212, 79, 79);
 }
 
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 18px;
-  border: none;
-  outline: none;
-  text-transform: uppercase;
-  color: rgb(35, 12, 46);
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: rgb(192, 92, 218);
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #be67d8;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: rgb(235, 235, 235);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: rgb(95, 30, 201);
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
 .context-dark, .bg-gray-dark, .bg-primary {
   color: rgba(255, 255, 255, 0.8);
@@ -163,7 +126,7 @@ ul, ol {
 
 
 .col_white_amrc { color:#FFF;}
-footer { width:100%; background-color:#312638; min-height:250px; padding:10px 0px 25px 0px ;}
+footer { width:100%; background-color:#3f1515; min-height:250px; padding:10px 0px 25px 0px ;}
 .pt2 { padding-top:40px ; margin-bottom:20px ;}
 footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
 .mb10 { padding-bottom:15px ;}

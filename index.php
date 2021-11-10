@@ -3,7 +3,7 @@
 
     <header>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script type="text/javascript" src="js//jquery-3.6.0.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -32,7 +32,7 @@
       <br>
       Iz tog razloga struktura naših studijskih programa je veoma fleksibilna i prati tehnološke inovacije i kretanje tržišta rada.
       FNN nudi studijske programe <b>Informacioni sistemi i tehnologije i Menadžment</b>, uz brojne master i doktorske programe na višim nivoima studija.<br>
-      💜 Čekamo Vas 💜
+      ❤️ Čekamo Vas ❤️
     </p>
   <br><img src="img\FNUniv.jpg">
   <p><small>Naš fakultet ima najsavremeniju infrastrukturu i uslove za rad</small></p>
@@ -86,7 +86,7 @@
       </div>
       <div class="container">
       <ul class="foote_bottom_ul_amrc">
-      <li><a href="index.php">Home</a></li>
+      <li><a href="login.php">Login</a></li>
       <li><a href="studenti-ajax.php">Studenti</a></li>
       <li><a href="profesori.php">Profesori</a></li>
       <li><a href="smerovi.php">Smerovi</a></li>
