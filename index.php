@@ -16,8 +16,8 @@
 
  <body>
 <div class="navbar">
-  <a href="index.php">Home</a>
-  <a href="studenti-ajax.php">Studenti</a>
+  <a href="studenti.php">Studenti</a>
+  <a href="studenti-ajax.php">Studenti ajax</a>
   <a href="profesori.php">Profesori</a>
   <a href="smerovi.php">Smerovi</a>
   <a href="ispiti.php">Ispiti</a>
@@ -87,7 +87,8 @@
       <div class="container">
       <ul class="foote_bottom_ul_amrc">
       <li><a href="login.php">Login</a></li>
-      <li><a href="studenti-ajax.php">Studenti</a></li>
+      <li><a href="studenti.php">Studenti</a></li>
+      <li><a href="studenti-ajax.php">Studenti ajax</a></li>
       <li><a href="profesori.php">Profesori</a></li>
       <li><a href="smerovi.php">Smerovi</a></li>
       <li><a href="ispiti.php">Ispiti</a></li>

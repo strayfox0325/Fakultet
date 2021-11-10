@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 07, 2021 at 06:03 PM
+-- Generation Time: Nov 10, 2021 at 11:00 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -38,8 +38,9 @@ CREATE TABLE `admini` (
 --
 
 INSERT INTO `admini` (`id`, `username`, `password`) VALUES
-(1, 'Isidora', 'Lazic');
-
+(1, 'Isidora', 'Lazic'),
+(2, 'Marko', 'Peric'),
+(3, 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -58,7 +59,8 @@ CREATE TABLE `ispiti` (
 
 INSERT INTO `ispiti` (`id`, `naziv`) VALUES
 (1, 'OIKT'),
-(2, 'Ekonomija');
+(2, 'Ekonomija'),
+(3, 'Matematika 2');
 
 -- --------------------------------------------------------
 
@@ -74,6 +76,14 @@ CREATE TABLE `polozeni_ispiti` (
   `datum` varchar(120) NOT NULL,
   `ocena` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `polozeni_ispiti`
+--
+
+INSERT INTO `polozeni_ispiti` (`id`, `student_id`, `ispit_id`, `profesor_id`, `datum`, `ocena`) VALUES
+(4, 4, 2, 2, '08.11.2021', 9),
+(5, 15, 3, 3, '26.08.2021', 6);
 
 -- --------------------------------------------------------
 
@@ -93,7 +103,8 @@ CREATE TABLE `profesori` (
 
 INSERT INTO `profesori` (`id`, `ime`, `prezime`) VALUES
 (1, 'Dejan', 'Lukic'),
-(2, 'Dragan', 'Lazic');
+(2, 'Dragan', 'Lazic'),
+(3, 'Sanja', 'Veselinovic');
 
 -- --------------------------------------------------------
 
@@ -137,7 +148,7 @@ INSERT INTO `studenti` (`id`, `ime`, `prezime`, `jmbg`, `broj_indeksa`, `godina_
 (4, 'Isidora', 'Lazic', '1234748294672', '192', 2018),
 (5, 'Marija', 'Jovic', '1746398789502', '362', 2018),
 (12, 'Ana', 'Markovic', '8472625364732', '553', 2017),
-(14, 'Marija', 'Jovic', '5847385849495', '111', 2019);
+(15, 'Dejan', 'Stojanovic', '8323893000023', '871', 2014);
 
 --
 -- Indexes for dumped tables
@@ -184,19 +195,19 @@ ALTER TABLE `studenti`
 -- AUTO_INCREMENT for table `ispiti`
 --
 ALTER TABLE `ispiti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `polozeni_ispiti`
 --
 ALTER TABLE `polozeni_ispiti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `profesori`
 --
 ALTER TABLE `profesori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `smerovi`
@@ -208,7 +219,7 @@ ALTER TABLE `smerovi`
 -- AUTO_INCREMENT for table `studenti`
 --
 ALTER TABLE `studenti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
